@@ -46,7 +46,8 @@ router.get("/:id",(req,res) => {
     const filme = getFilmesById(id);
     
     if (!filme){
-        res.send("Filme não encontrado!")
+        res.send("Filme não encontrado!");
+        return;
     }
     res.send(filme) 
 });
@@ -83,12 +84,13 @@ router.put("/editar/:id", (req,res) => {
     }
 
     const filme = getFilmesById(id);
+
     filmes[filmeIndex] = {
         ...filme,
         ...filmeEditado,
     };
 
-    res.send(filmes[filmesIndex]);
+    res.send(filmes[filmeIndex]);
 
 });
 
@@ -104,7 +106,5 @@ router.delete("/deletar/:id", (req,res) => {
     filmes.splice(filmeIndex, 1);
     res.send ({message: "Filme removido com sucesso!"});
 })
-
-
 
 module.exports = router;

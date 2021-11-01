@@ -1,12 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+const filmesRouter = require('./routes/filmes.routes');
 const app = express();
 app.use(express.json());
 app.use(cors);
-const filmesRouter = require('./routes/filmes.routes');
 
-app.get("/",(req,res)=> res.send("ola professor"))
-app.use("/filmes", filmesRouter)
+app.use("/filmes", filmesRouter);
 
-const port = 3000;
-app.listen(port, () => console.log(`App rodando. http://localhost:3000/filmes`) );
+const port = 3001;
+app.listen(port, () => console.log(`App rodando. http://localhost:${port}/filmes`) );
