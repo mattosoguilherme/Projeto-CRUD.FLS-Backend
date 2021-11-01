@@ -1,0 +1,23 @@
+{
+  "name": "filmes",
+  "version": "1.0.0",
+  "description": "projeto 01 - crud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattosoguilherme/Projeto-CRUD.FLS-Backend.git"
+  },
+  "author": "Guilherme Mattoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattosoguilherme/Projeto-CRUD.FLS-Backend/issues"
+  },
+  "homepage": "https://github.com/mattosoguilherme/Projeto-CRUD.FLS-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
