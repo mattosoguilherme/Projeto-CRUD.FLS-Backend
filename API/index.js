@@ -1,15 +1,13 @@
 const express = require('express');
 const cors = require('cors');
-// const filmesRouter = require('./routes/filmes.routes');
+const Conn = require("../API/conn/conn");
+const FilmesRouter = require("../API/routes/filmes.routes");
 const app = express();
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 
-// app.use("/filmes", filmesRouter);
+app.use("/filmes",FilmesRouter);
+Conn();
 
-app.get("/filmes", (req,res) =>{
-    res.send("ola")
-})
-
-const port = 3000;
-app.listen(port, () => console.log(`App rodando. http://localhost:${port}/filmes`) );
+const port = 3001;
+app.listen(port,()=>console.log(`App rodando: http://localhost:${port}/filmes`));
