@@ -8,6 +8,6 @@ const FilmeModel = new Mongoose.Schema({
     dataCriacao: {type: Date, default: Date.now()}
 });
 
-const filme = Mongoose.model('filmes', FilmeModel)
+const filme = Mongoose.model('Filmes', FilmeModel)
 
 module.exports = filme;
